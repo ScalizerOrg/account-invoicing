@@ -4,7 +4,7 @@
     "name": "Scalizer Account Invoice Intragroup",
     "version": "19.0.1.0.0",
     "author": "Scalizer",
-    "website": "https://www.scalizer.fr",
+    "website": "https://github.com/OCA/account-invoicing",
     "category": "Accounting/Accounting",
     "summary": "Detect intragroup invoices based on internal company partners.",
     "description": """

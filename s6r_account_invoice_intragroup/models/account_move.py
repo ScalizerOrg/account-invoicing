@@ -8,15 +8,15 @@ _logger = logging.getLogger(__name__)
 
 
 class AccountMove(models.Model):
-    _inherit = 'account.move'
+    _inherit = "account.move"
 
     is_intragroup_invoice = fields.Boolean(
-        string='Intragroup Invoice',
-        compute='_compute_is_intragroup_invoice',
+        string="Intragroup Invoice",
+        compute="_compute_is_intragroup_invoice",
         store=True,
         readonly=True,
         help="Checked when the document commercial partner matches "
-             "an internal company commercial partner.",
+        "an internal company commercial partner.",
     )
 
     @api.depends(

@@ -1,15 +1,15 @@
-Scalizer Account Invoice Intragroup
-==================================
-This module detects intragroup customer invoices and vendor bills by checking whether the
-document’s commercial partner matches an internal company partner in Odoo.
+# Scalizer Account Invoice Intragroup
+
+This module detects intragroup customer invoices and vendor bills by checking whether
+the document’s commercial partner matches an internal company partner in Odoo.
 
 ## Authors
 
-* Scalizer
+- Scalizer
 
 ## Contributors
 
-* Houda BENTALEB
+- Houda BENTALEB
 
 ## Maintainers
 
