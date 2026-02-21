@@ -16,7 +16,6 @@ of the internal company partners.
     ],
     "data": [
         "views/account_move_views.xml",
-
     ],
     "post_init_hook": "post_init_hook",
     "license": "LGPL-3",
