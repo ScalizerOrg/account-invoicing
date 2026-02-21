@@ -19,10 +19,7 @@ class AccountMove(models.Model):
         "an internal company commercial partner.",
     )
 
-    @api.depends(
-        "partner_id",
-        "partner_id.commercial_partner_id"
-    )
+    @api.depends("partner_id", "partner_id.commercial_partner_id")
     def _compute_is_intragroup_invoice(self):
         """
         Mark the document as intragroup when its commercial partner matches
