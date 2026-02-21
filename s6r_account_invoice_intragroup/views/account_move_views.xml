@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Form view -->
+    <record id="view_move_form_intragroup_invoice" model="ir.ui.view">
+        <field name="name">account.move.form.intragroup.invoice</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_incoterm_id']" position="before">
+                <field name="is_intragroup_invoice"/>
+            </xpath>
+        </field>
+    </record>
+    <!-- Invoice/Bill list (List) view -->
+    <record id="view_invoice_tree_intragroup_invoice" model="ir.ui.view">
+        <field name="name">account.move.tree.intragroup.invoice</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_invoice_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//list" position="inside">
+                <field name="is_intragroup_invoice" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+    <!-- Search filters -->
+    <record id="view_account_move_filter_intragroup_invoice" model="ir.ui.view">
+        <field name="name">account.move.search.intragroup.invoice</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='not_sent']" position="after">
+                <separator/>
+                <filter
+                    name="intragroup_invoice"
+                    string="Intragroup"
+                    domain="[('is_intragroup_invoice', '=', True)]"
+                />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
