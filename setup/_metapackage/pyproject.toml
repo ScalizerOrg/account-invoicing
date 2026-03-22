@@ -1,11 +1,15 @@
 [project]
 name = "odoo-addons-oca-account-invoicing"
-version = "19.0.20260220.0"
+version = "19.0.20260310.0"
 dependencies = [
+    "odoo-addon-account_global_discount==19.0.*",
     "odoo-addon-account_invoice_fixed_discount==19.0.*",
     "odoo-addon-account_invoice_pricelist==19.0.*",
     "odoo-addon-account_invoice_pricelist_sale==19.0.*",
+    "odoo-addon-account_invoice_refund_link==19.0.*",
+    "odoo-addon-account_invoice_triple_discount==19.0.*",
     "odoo-addon-portal_account_personal_data_only==19.0.*",
+    "odoo-addon-sale_order_invoicing_qty_percentage==19.0.*",
 ]
 classifiers=[
     "Programming Language :: Python",
